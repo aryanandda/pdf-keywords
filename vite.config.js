@@ -12,9 +12,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  server: {
-    open: true,
-    origin: 'http://localhost:8000'
   }
 })
