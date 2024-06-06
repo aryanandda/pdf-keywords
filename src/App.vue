@@ -23,7 +23,7 @@
           <StepperPanel header="File PDF">
               <template #content="{ prevCallback, nextCallback }">
                   <div class="card">
-                      <FileUpload name="files" url="http://45.13.132.133:8000/upload" @upload="onUploadCompleted($event)" @before-send="onBeforeSend($event)" @error="onUploadError($event)" :multiple="true" accept="application/pdf">
+                      <FileUpload name="files" url="http://45.13.132.133:8000/upload" @upload="onUploadCompleted($event)" @error="onUploadError($event)" :multiple="true" accept="application/pdf">
                           <template #empty>
                               <p>Drag and drop files to here to upload.</p>
                           </template>
@@ -137,13 +137,6 @@ const submit = (next) => {
   // return <div class="card flex justify-content-center">
   //       <ProgressSpinner />
   //   </div>
-}
-
-const onBeforeSend = (e) => {
-  e.xhr.setRequestHeader('Access-Control-Allow-Origin',"*");
-  e.xhr.setRequestHeader('Access-Control-Allow-Methods',"*");
-
-  return e
 }
 
 const stepChanged = (e) => {
