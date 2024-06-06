@@ -23,7 +23,7 @@
           <StepperPanel header="File PDF">
               <template #content="{ prevCallback, nextCallback }">
                   <div class="card">
-                      <FileUpload name="files" url="http://localhost:8000/upload" @upload="onUploadCompleted($event)" @error="onUploadError($event)" :multiple="true" accept="application/pdf">
+                      <FileUpload name="files" url="localhost:8000/upload" @upload="onUploadCompleted($event)" @error="onUploadError($event)" :multiple="true" accept="application/pdf">
                           <template #empty>
                               <p>Drag and drop files to here to upload.</p>
                           </template>
@@ -121,7 +121,7 @@ const submit = (next) => {
     reqVariables[v.name] = v.keywords
   })
 
-  axios.post('http://localhost:8000/submit', {
+  axios.post('localhost:8000/submit', {
     variables: reqVariables,
     files: uploadedFilenames.value
   })
