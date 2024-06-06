@@ -141,6 +141,7 @@ const submit = (next) => {
 
 const onBeforeSend = (e) => {
   e.xhr.setRequestHeader('Access-Control-Allow-Origin',"*");
+  e.xhr.setRequestHeader('Access-Control-Allow-Methods',"*");
 
   return e
 }
