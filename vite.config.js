@@ -15,6 +15,6 @@ export default defineConfig({
   },
   server: {
     open: true,
-    origin: 'http://localhost:8000/'
+    origin: 'http://localhost:8000'
   }
 })
